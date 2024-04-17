@@ -1,0 +1,114 @@
+// -------------------------------------------------------------------------------- //
+// -                            Toast Message                                     - //
+// -------------------------------------------------------------------------------- //
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 9999;
+}
+
+.toast {
+    min-width: 400px;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px 0;
+    margin-top: 24px;
+    border-left: 8px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear 0.3s;
+
+    &__icon {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    &--notification {
+        border-color: #3ac279;
+        // background: rgba(58, 194, 121, 0.2);
+    }
+    &--notification &__icon {
+        color: #3ac279;
+    }
+
+    &--success {
+        border-color: #47d864;
+        // background: rgba(71, 216, 100, 0.2);
+    }
+    &--success &__icon {
+        color: #47d864;
+    }
+
+    &--info {
+        border-color: #2f86eb;
+        // background: rgba(47, 134, 235, 0.2);
+    }
+    &--info &__icon {
+        color: #2f86eb;
+    }
+
+    &--warning {
+        border-color: #ffc021;
+        // background: rgba(255, 192, 33, 0.2);
+    }
+    &--warning &__icon {
+        color: #ffc021;
+    }
+    
+    &--error {
+        border-color: #ff623d;
+        // background: rgba(255, 98, 61, 0.2);
+    }
+    &--error &__icon {
+        color: #ff623d;
+    }
+
+    &__content {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
+    &__title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    &__msg {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: #3a3b3a;
+        margin-top: 8px;
+    }
+
+    &__close {
+        font-size: 16px;
+        padding: 10px 20px;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+}
